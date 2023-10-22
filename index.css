@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Typography */
+html {
+  font-size: 100%;
+} /*16px*/
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  display: grid;
+  height: 100vh;
+  justify-content: center;
+  align-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 1rem 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+p {
+  font-size: 18px;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 4.1rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+/* My Styles */
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 40fr 55fr;
+}
+
+.result-container {
+  background-image: linear-gradient(
+    170deg,
+    hsl(252deg 100% 67%) 0%,
+    hsl(251deg 98% 65%) 40%,
+    hsl(250deg 96% 64%) 54%,
+    hsl(248deg 94% 63%) 62%,
+    hsl(247deg 92% 61%) 68%,
+    hsl(246deg 89% 60%) 73%,
+    hsl(245deg 88% 58%) 78%,
+    hsl(243deg 85% 57%) 84%,
+    hsl(242deg 83% 55%) 90%,
+    hsl(241deg 81% 54%) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: hsl(241, 100%, 89%);
+  font-weight: 400;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  background-image: linear-gradient(
+    170deg,
+    hsl(256deg 72% 46%) 0%,
+    hsl(254deg 72% 46%) 40%,
+    hsl(253deg 72% 46%) 54%,
+    hsl(251deg 72% 46%) 62%,
+    hsl(249deg 72% 46%) 68%,
+    hsl(248deg 72% 46%) 73%,
+    hsl(246deg 72% 46%) 78%,
+    hsl(244deg 72% 46%) 84%,
+    hsl(243deg 72% 46%) 90%,
+    hsl(241deg 72% 46%) 100%
+  );
+}
+
+.result h1, .result p {
+  margin-block: 0;
+  line-height: normal;
+}
+
+.result h1 {
+  font-weight: 700;
+}
+
+.result p {
+  opacity: .4;
+}
+
+.result + h3 {
+  margin-top: 1.2rem;
+  margin-bottom: 0;
+  font-size: 1.5rem;
+}
+
+.wrap {
+  display: block;
+  width: 80%;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+.summary-container {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+  justify-content: center;
+  color: hsl(224, 30%, 27%);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.summary {
+  border-radius: 10px;
+  margin-block: 1rem;
+  padding-block: 0.8rem;
+  padding-inline: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bg-light-red {
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.bg-orangey-yellow {
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.bg-green-teal {
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.bg-cobalt-blue {
+  background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.text-white {
+  color: hsl(0, 0%, 100%);
+}
+
+.text-light-red {
+  color: hsl(0, 100%, 67%);
+}
+
+.text-orangey-yellow {
+  color: hsl(39, 100%, 56%);
+}
+
+.text-green-teal {
+  color: hsl(166, 100%, 37%);
+}
+
+.text-cobalt-blue {
+  color: hsl(234, 85%, 45%);
+}
+
+.icon {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.text-light-lavender {
+  color: hsla(224, 30%, 27%, .4);
+}
+
+.center {
+  text-align: center;
+}
+
+.btn {
+  outline: 0;
+  border: 0;
+  padding-block: 0.8rem;
+  width: 100%;
+  background-color: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+  font-weight: 700;
+  margin-block: 1rem;
+}
+
+.btn:hover {
+  background-image: linear-gradient(
+    170deg,
+    hsl(256deg 72% 46%) 0%,
+    hsl(254deg 72% 46%) 40%,
+    hsl(253deg 72% 46%) 54%,
+    hsl(251deg 72% 46%) 62%,
+    hsl(249deg 72% 46%) 68%,
+    hsl(248deg 72% 46%) 73%,
+    hsl(246deg 72% 46%) 78%,
+    hsl(244deg 72% 46%) 84%,
+    hsl(243deg 72% 46%) 90%,
+    hsl(241deg 72% 46%) 100%
+  );
+  cursor: pointer;
+}
+
+
+
+@media (min-width: 1000px) {
+  .container {
+    height: 100%;
+    grid-template-columns: 45fr 45fr;
+    grid-template-rows: none;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 8px 6px 14px hsla(224, 30%, 27%, .3);
+  }
+
+  .result-container {
+    padding-inline: 2rem;
+    border-radius: 20px;
+  }
+
+  .wrap {
+    width: 250px;
+  }
+
+  .summary-container {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Theme colors: Delete Later */
+/* .colors {
+  color: hsl(0, 100%, 67%);
+  color: hsl(39, 100%, 56%);
+  color: hsl(166, 100%, 37%);
+  color: hsl(234, 85%, 45%);
+  color: hsl(252, 100%, 67%);
+  color: hsl(241, 81%, 54%);
+  color: hsl(256, 72%, 46%);
+  color: #2421ca00;
+  color: hsl(0, 0%, 100%);
+  color: hsl(221, 100%, 96%);
+  color: hsl(241, 100%, 89%);
+  color: hsl(224, 30%, 27%);
+} */
